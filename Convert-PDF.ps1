@@ -38,7 +38,7 @@ while ($Directory -ne 'NoEnd')
 			{   
 				'Processing ' + $pdf.Name        
 				$param = "-sOutputFile=$tif"
-				& $Ghostscripttool -q -dNOPAUSE -sDEVICE=tiffgray $param -r300 $pdf.FullName -c quit
+				& $Ghostscripttool -q -dNOPAUSE -sDEVICE=tiffgray $param -r300 $pdf.FullName -c quit #Greyscale 8bit and 300dpi
 			}
 			Move-Item "$inputDir\$($pdf.Name)" $CompletedPDF
 		}
@@ -50,7 +50,7 @@ while ($Directory -ne 'NoEnd')
 		{
 			$Tifdata = $tif.Fullname
 			$Pdfdata = $outputDirPDF+'\'+$tif.basename
-			$result = & $Tesseractexe --tessdata-dir $Tesseractdata $Tifdata $Pdfdata -l deu pdf
+			$result = & $Tesseractexe --tessdata-dir $Tesseractdata $Tifdata $Pdfdata -l deu pdf #"DEU" is the Language Code for German.
 			Remove-Item -Path $Tifdata -Force -Confirm:$false
 		}
 		$Directory = Get-ChildItem -Name $inputDir
