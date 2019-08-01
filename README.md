@@ -1,9 +1,11 @@
 Prerequisites:
 
-Tesseract + Tesseract-ocr data: 
-https://github.com/UB-Mannheim/tesseract/wiki 
-Ghostscript: 
+Tesseract + Tesseract-ocr data:
+https://github.com/UB-Mannheim/tesseract/wiki
+
+Ghostscript:
 https://www.ghostscript.com/download/gsdnld.html 
+
 
 Logic
 
