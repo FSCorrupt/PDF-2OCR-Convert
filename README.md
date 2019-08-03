@@ -2,6 +2,7 @@ Prerequisites:
 
 Tesseract + Tesseract-ocr data:
 https://github.com/UB-Mannheim/tesseract/wiki
+https://github.com/tesseract-ocr/tessdata
 
 Ghostscript:
 https://www.ghostscript.com/download/gsdnld.html 
